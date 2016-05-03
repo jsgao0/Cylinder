@@ -107,28 +107,38 @@ Author: jsgao0
         var topEllipseAttr = {
           rx: (config.width / 2),
           ry: 5,
-          fill: '#669900'
+          fill: config.color.head
         };
         topEllipseAttr.cx = topEllipseAttr.rx;
         topEllipseAttr.cy = topEllipseAttr.ry;
+        
+        var topEllipseMaskAttr = {
+          rx: (config.width / 2),
+          ry: 5,
+          fill: '#000',
+          opacity: '.4'
+        };
+        topEllipseMaskAttr.cx = topEllipseMaskAttr.rx;
+        topEllipseMaskAttr.cy = topEllipseMaskAttr.ry;
         
         var rectAttr = {
           x: 0,
           y: 5,
           height: config.height,
           width: config.width,
-          fill: '#88cc00'
+          fill: config.color.body
         }
                 
         var bottomEllipseAttr = {
           rx: (config.width / 2),
           ry: 5,
-          fill: '#88cc00'
+          fill: config.color.body
         };
         bottomEllipseAttr.cx = bottomEllipseAttr.rx;
         bottomEllipseAttr.cy = (bottomEllipseAttr.ry + config.height);
         
         var topEllipse = $(document.createElementNS("http://www.w3.org/2000/svg", "ellipse")).attr(topEllipseAttr),
+            topEllipseMask = $(document.createElementNS("http://www.w3.org/2000/svg", "ellipse")).attr(topEllipseMaskAttr),
             rect = $(document.createElementNS("http://www.w3.org/2000/svg", "rect")).attr(rectAttr),
             bottomEllipse = $(document.createElementNS("http://www.w3.org/2000/svg", "ellipse")).attr(bottomEllipseAttr);
         
@@ -138,7 +148,8 @@ Author: jsgao0
           .width(config.width)
           .append(bottomEllipse)
           .append(rect)
-          .append(topEllipse);
+          .append(topEllipse)
+          .append(topEllipseMask);
         
         this.append(result);
         return result;
