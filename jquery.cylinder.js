@@ -59,6 +59,7 @@ Author: jsgao0
     this.append(
       $(document.createElementNS("http://www.w3.org/2000/svg", "svg"))
       .height(config.height + 30)
+      .width(config.width)
       .append(bottomEllipse)
       .append(rect)
       .append(topEllipse)
