@@ -1,8 +1,8 @@
 (function($) {
   $.fn.cylinder = function cylinder(config) {
     var defaultConfig = {
-      height: 30,
-      width: 15,
+      height: 100,
+      width: 50,
       color: {
         head: '#669900',
         body: '#88cc00'
@@ -55,5 +55,7 @@
       .append(rect)
       .append(topEllipse)
     );
+    
+    return this;
   }
 }(jQuery));
