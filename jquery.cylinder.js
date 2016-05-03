@@ -1,3 +1,11 @@
+/*
+Version: 0.1.0
+Project Name: Cylinder
+Purpose: Draw the cylinders as SVG.
+Date: 2016/05/03
+Author: jsgao0
+*/
+
 (function($) {
   $.fn.cylinder = function cylinder(config) {
     var defaultConfig = {
