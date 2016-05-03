@@ -55,6 +55,5 @@
       .append(rect)
       .append(topEllipse)
     );
-    console.log(this);
   }
 }(jQuery));
