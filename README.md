@@ -5,6 +5,9 @@ Draw cylinders as SVG using jQuery
 1. SVG support
 2. jQuery 1.6+
 
+## DEMO
+<a href="http://jsbin.com/pemivaw/17/edit?html,output" target="_blank">JS Bin</a>
+
 ## Usage
 ```
 $('targetElement').cylinder({
